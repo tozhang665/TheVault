@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link} from "react-router-dom";
+import Button from 'react-bootstrap/Button';
  
 const Record = (props) => (
  <tr>
@@ -68,9 +69,7 @@ export default function RecordList() {
  // This following section will display the table with the records of individuals.
   return (
     <div>
-      <NavLink className="nav-link" to="/recordlist/create">
-        Create Record
-      </NavLink>
+      <Button href="/recordlist/create" variant="outline-secondary">Create Record</Button>
       <h3>Record List</h3>
       <table className="table table-striped" style={{ marginTop: 20 }}>
         <thead>
