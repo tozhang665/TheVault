@@ -2,6 +2,9 @@ import React from "react";
  
 // We import bootstrap to make our application look better.
 import "bootstrap/dist/css/bootstrap.css";
+import Dropdown from 'react-bootstrap/Dropdown';
+import DropdownButton from 'react-bootstrap/DropdownButton';
+
  
 // We import NavLink to utilize the react router.
 import { NavLink } from "react-router-dom";
@@ -24,16 +27,20 @@ export default function MasterNavbar() {
        </button>
  
        <div className="collapse navbar-collapse" id="navbarSupportedContent">
-         <ul className="navbar-nav ml-auto">
+
+         <ul className="nav">
            <li className="nav-item">
-            <NavLink className="nav-link" to="/">
-              Home
-            </NavLink>
-            <NavLink className="nav-link" to="/recordlist">
-              Records
-            </NavLink>
+              <NavLink className="nav-link" to="/">
+                Home
+              </NavLink>
+            </li>
+            <li className="nav-item">
+            <DropdownButton className="mt-2" variant="light" title="Projects">
+                <Dropdown.Item href="/recordlist">Employee Records</Dropdown.Item>
+            </DropdownButton>
            </li>
          </ul>
+         
        </div>
      </nav>
    </div>
