@@ -104,7 +104,7 @@ export default function Create() {
          </div>
        </div>
        <div className="form-group">
-         <button variant="outline-secondary">Create person</button>
+         <Button variant="outline-secondary">Create person</Button>
        </div>
      </form>
    </div>
