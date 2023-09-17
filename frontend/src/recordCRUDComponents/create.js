@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router";
+import Button from 'react-bootstrap/Button';
  
 export default function Create() {
  const [form, setForm] = useState({
@@ -36,7 +37,7 @@ export default function Create() {
    });
  
    setForm({ name: "", position: "", level: "" });
-   navigate("/");
+   navigate("/recordList");
  }
  
  // This following section will display the form that takes the input from the user.
@@ -103,11 +104,7 @@ export default function Create() {
          </div>
        </div>
        <div className="form-group">
-         <input
-           type="submit"
-           value="Create person"
-           className="btn btn-primary"
-         />
+         <button variant="outline-secondary">Create person</button>
        </div>
      </form>
    </div>
