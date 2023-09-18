@@ -35,7 +35,10 @@ export default function MasterNavbar() {
                 <NavDropdown title="Projects" id="basic-nav-dropdown">
                   <NavDropdown.Item href="/recordList">
                     Employee Records
-                    </NavDropdown.Item>
+                  </NavDropdown.Item>
+                  <NavDropdown.Item href="/game">
+                    Game
+                  </NavDropdown.Item>
                   <NavDropdown.Divider />
                   <NavDropdown.Item href="/">
                     Temp link to "Contributers"

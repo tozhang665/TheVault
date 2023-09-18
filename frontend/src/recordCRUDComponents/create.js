@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router";
 import Button from 'react-bootstrap/Button';
  
-export default function Create() {
+export default function RecordsCreate() {
  const [form, setForm] = useState({
    name: "",
    position: "",
