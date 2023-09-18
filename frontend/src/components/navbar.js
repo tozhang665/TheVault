@@ -23,7 +23,6 @@ export default function MasterNavbar() {
        >
          <span className="navbar-toggler-icon"></span>
        </button>
- 
        <div className="collapse navbar-collapse" id="navbarSupportedContent">
          <Navbar expand="lg" className="bg-body-tertiary">
           <Container>
