@@ -1,7 +1,7 @@
 import express from "express";
 import cors from "cors";
-import "./loadEnvironment.mjs";
-import records from "./routes/record.mjs";
+import "./backend/server/loadEnvironment.mjs";
+import records from "./backend/server/routes/record.mjs";
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
 
@@ -20,7 +20,7 @@ app.use("/record", records);
 if(process.env.NODE_ENV === "production"){
   app.use(express.static("client/build"))
   app.get("*",(req,res)=>{
-    res.sendFile(path.resolve(__dirname, "client","build", "index.html"))
+    res.sendFile(path.resolve(__dirname, "frontend","build", "index.html"))
   })
 }
 
