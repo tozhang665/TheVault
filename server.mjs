@@ -4,18 +4,13 @@ import "./backend/server/loadEnvironment.mjs";
 import records from "./backend/server/routes/record.mjs";
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
+import * as path from 'path';
+
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
-
-import * as path from 'path';
 const PORT = process.env.PORT || 5050;
 const app = express();
-
-app.use(cors());
-app.use(express.json());
-
-app.use("/record", records);
 
 if(process.env.NODE_ENV === "production"){
   app.use(express.static("frontend/build"));
@@ -23,6 +18,12 @@ if(process.env.NODE_ENV === "production"){
     res.sendFile(path.resolve(__dirname, "frontend","build", "index.html"));
   })
 }
+
+app.use(cors());
+app.use(express.json());
+
+app.use("/recordList", records);
+
 
 // start the Express server
 app.listen(PORT, () => {
