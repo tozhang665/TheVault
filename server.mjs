@@ -22,7 +22,7 @@ if(process.env.NODE_ENV === "production"){
 app.use(cors());
 app.use(express.json());
 
-app.use("/recordList", records);
+app.use("/record", records);
 
 
 // start the Express server
