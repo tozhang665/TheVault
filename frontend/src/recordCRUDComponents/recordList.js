@@ -33,8 +33,8 @@ export default function RecordList() {
     //  }
     //  const records = await response.json();
     const records = [{name:"Tony", position:"student", level:"junior"},
-                    {name:"Trevor", position:"student", level:"junior"}]
-
+                    {name:"Trevor", position:"student", level:"junior"},
+                    {name:"Tanner", position:"student", level:"junior"}]
      setRecords(records);
    }
  
